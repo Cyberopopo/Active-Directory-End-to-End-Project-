@@ -20,7 +20,7 @@ Project consists of a simple PowerShell script that walks the user through "zero
 
 <p align="center">
 Launch the utility: <br/>
-<img style="display: block;-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://i.imgur.com/Idqsx7W.png" width="721" height="368">
+<img src="https://i.imgur.com/Idqsx7W.png" height="80%" width="80%" alt="Windows 10 Installation Step"/>
 <br />
 <br />
 Select the disk:  <br/>
