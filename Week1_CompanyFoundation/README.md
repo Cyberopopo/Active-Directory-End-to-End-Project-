@@ -28,7 +28,8 @@ Build a functioning **Active Directory (AD) domain** with clients and basic poli
 4. Restart the client → verify it is joined to the domain.  
 
 📸 **Screenshot:**  
-![Client Joined to Domain](https://i.imgur.com/Bf1xJl8.png)  
+![Client Joined to Domain](https://i.imgur.com/TUYQWTI.png)
+ 
 
 ---
 
