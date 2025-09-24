@@ -23,7 +23,7 @@ Download the required ISO files for the lab:
 - **Kali Linux ISO** → attacker machine.  
 
 📸 **Screenshot:**  
-![Downloaded ISOs](IMGUR_LINK_HERE)
+![Downloaded ISOs](https://i.imgur.com/M3zrqjU.png)
 
 ---
 
@@ -33,15 +33,16 @@ Download the required ISO files for the lab:
 3. Select Guest OS: **Windows Server 2022**.  
 4. Name the VM: `DC1`.  
 5. Allocate:  
-   - **RAM**: 4 GB  
+   - **RAM**: 2 GB  
    - **CPU**: 2 cores  
-   - **Disk**: 40 GB  
+   - **Disk**: 20 GB  
    - **Network Adapter**: Host-Only  
 6. Mount the **Windows Server 2022 ISO**.  
 7. Finish setup → Power on → begin installation.  
 
 📸 **Screenshot:**  
-![Create Windows Server VM](IMGUR_LINK_HERE)
+![Domain Controller VM Creation](https://i.imgur.com/yZKIOyq.png)
+
 
 ---
 
@@ -57,7 +58,8 @@ Download the required ISO files for the lab:
 5. Finish and power on.  
 
 📸 **Screenshot:**  
-![Create Windows 10 VM](IMGUR_LINK_HERE)
+![Create Windows 10 VM](https://i.imgur.com/Bf1xJl8.png)
+
 
 ---
 
