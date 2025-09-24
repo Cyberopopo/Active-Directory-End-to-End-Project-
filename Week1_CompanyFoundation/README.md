@@ -12,7 +12,7 @@
    - New forest name: `cyberopopo.local`  
    - Restart when prompted.  
 
-📸 **Screenshot:**  
+ 
 ![Domain Controller Setup](https://i.imgur.com/dFYmpRD.png)
 
 ---
@@ -24,7 +24,7 @@
 3. Enter admin credentials from the Domain Controller.  
 4. Restart the client → verify it is joined to the domain.  
 
-📸 **Screenshot:**  
+ 
 ![Client Joined to Domain](https://i.imgur.com/TUYQWTI.png)
 
 ---
@@ -38,7 +38,7 @@
    - **Finance**  
 4. Ensure **Protect container from accidental deletion** is checked.
 
-📸 **Screenshot:**  
+ 
 ![OUs Created](https://i.imgur.com/Vz0vrpC.png)
 
 ---
@@ -46,13 +46,14 @@
 ## 🔹 Step 4: Add Sample Users and Groups  
 1. In each OU, right-click → **New → User**.  
 2. Create sample users:  
-   - HR: `Alice.HR`, `Bob.HR`  
-   - IT: `Charlie.IT`, `Diana.IT`  
-   - Finance: `Eve.Fin`, `Frank.Fin`  
+   - HR: `Alice Oyedele`, `Bob Adeshina`  
+   - IT: `Charlie Ridwan`, `Diana Pelumi`  
+   - Finance: `Eve Adam`, `Frank Lin`  
 3. Create security groups for each department and add users accordingly.
 
-📸 **Screenshot:**  
-![Users and Groups](https://i.imgur.com/zfQGpbK.png)  <!-- replace with your actual screenshot -->
+ 
+![Users and Groups](https://i.imgur.com/YsH5lbR.png)
+
 
 ---
 
@@ -60,12 +61,12 @@
 1. Open **Group Policy Management**.  
 2. Create a new GPO → link it to the domain.  
 3. Configure policies like:  
-   - **Password Policy**: Minimum 8 characters, complexity enabled  
+   - **Password Policy**: Minimum 12 characters, complexity enabled  
    - **Account Lockout Policy**: 5 failed login attempts  
-   - **Screen Lock/Idle Timeout**: 10 minutes  
+   - **Screen Lock**: 5 minutes  
 
-📸 **Screenshot:**  
-![GPO Applied](https://i.imgur.com/zfQGpbK.png)  <!-- replace with your actual GPO screenshot -->
+  
+![GPO Applied](https://i.imgur.com/rMfq5lH.png)
 
 ---
 
@@ -74,4 +75,4 @@
 - 1–2 Windows clients joined to the domain  
 - OUs, users, and groups created  
 - Basic GPOs applied  
-- Screenshots documented in GitHub
+
