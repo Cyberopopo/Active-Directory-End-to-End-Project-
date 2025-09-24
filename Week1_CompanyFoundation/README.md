@@ -7,7 +7,7 @@ Build a functioning **Active Directory (AD) domain** with clients and basic poli
 
 ---
 
-## 🔹 Step 1: Deploy Windows Server 2022 as Domain Controller (corp.local)  
+## 🔹 Step 1: Deploy Windows Server 2022 as Domain Controller (cyberopopo.local)  
 1. Power on your **Windows Server 2022 VM (DC1)**.  
 2. Open **Server Manager** → click **Add roles and features**.  
 3. Install the **Active Directory Domain Services (AD DS)** role.  
@@ -23,7 +23,7 @@ Build a functioning **Active Directory (AD) domain** with clients and basic poli
 ## 🔹 Step 2: Add Windows 10/11 Clients to the Domain  
 1. Open **System Properties** on the client VM.  
 2. Under **Computer Name → Change**, set:  
-   - Domain: `corp.local`  
+   - Domain: `cyberopopo.local`  
 3. Enter admin credentials from the Domain Controller.  
 4. Restart the client → verify it is joined to the domain.  
 
