@@ -5,8 +5,8 @@
 ---
 
 ## 🔹 Objectives Achieved
-- Deployed **Windows Server 2022** as a Domain Controller (`corp.local`).  
-- Added **Windows 10/11 clients** to the domain.  
+- Deployed **Windows Server 2022** as a Domain Controller (`cyberopopo.local`).  
+- Added **Windows 10 client** to the domain.  
 - Created **Organizational Units (OUs)**: HR, IT, Finance.  
 - Added **sample users and security groups**.  
 - Applied **basic Group Policy Objects (GPOs)** for security.
@@ -19,30 +19,26 @@
    - Installed **AD DS role**.  
    - Promoted server to **Domain Controller** with new forest `corp.local`.  
    - Verified server restart and functionality.  
-   - 📸 Screenshot: ![Domain Controller Setup](https://i.imgur.com/dFYmpRD.png)
+  
 
 2. **Client Domain Join**
-   - Configured **Windows 10/11 VM** to join domain `cyberopopo.local`.  
+   - Configured **Windows 10 VM** to join domain `cyberopopo.local`.  
    - Entered **DC admin credentials**.  
    - Restarted and verified domain membership.  
-   - 📸 Screenshot: ![Client Joined to Domain](https://i.imgur.com/TUYQWTI.png)
-
+  
 3. **Organizational Units (OUs)**
    - Created OUs for **HR, IT, and Finance**.  
    - Enabled **protection from accidental deletion**.  
-   - 📸 Screenshot: ![OUs Created](https://i.imgur.com/zfQGpbK.png) <!-- replace with actual -->
-
+ 
 4. **Users and Groups**
    - Created sample users in each OU.  
    - Created security groups and added users accordingly.  
-   - 📸 Screenshot: ![Users and Groups](https://i.imgur.com/zfQGpbK.png) <!-- replace with actual -->
 
 5. **Basic GPOs Applied**
-   - Password policy: Minimum 8 characters, complexity enabled.  
+   - Password policy: Minimum 12 characters, complexity enabled.  
    - Account lockout: 5 failed login attempts.  
-   - Screen lock/idle timeout: 10 minutes.  
-   - 📸 Screenshot: ![GPO Applied](https://i.imgur.com/zfQGpbK.png) <!-- replace with actual -->
-
+   - Screen lock/idle timeout: 5 minutes.  
+ 
 ---
 
 ## 🔹 Challenges Encountered
