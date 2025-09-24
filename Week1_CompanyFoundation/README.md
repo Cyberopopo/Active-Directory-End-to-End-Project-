@@ -1,9 +1,6 @@
-# 📅 Week 1 — Phase 1: Company is Born (Foundation)  
+# 🗓 Week 1 — Phase 1: Company is Born (Foundation)
 
----
-
-## 🎯 Goal  
-Build a functioning **Active Directory (AD) domain** with clients and basic policies.  
+**Goal:** Build a functioning Active Directory (AD) domain.
 
 ---
 
@@ -29,41 +26,52 @@ Build a functioning **Active Directory (AD) domain** with clients and basic poli
 
 📸 **Screenshot:**  
 ![Client Joined to Domain](https://i.imgur.com/TUYQWTI.png)
- 
 
 ---
 
 ## 🔹 Step 3: Create Organizational Units (OUs)  
-1. On `DC1`, open **Active Directory Users and Computers (ADUC)**.  
-2. Right-click domain → **New → Organizational Unit**.  
-3. Create:  
+1. Open **Active Directory Users and Computers (ADUC)**.  
+2. Right-click your domain → **New → Organizational Unit**.  
+3. Create the following OUs:  
    - **HR**  
    - **IT**  
    - **Finance**  
+4. Ensure **Protect container from accidental deletion** is checked.
 
 📸 **Screenshot:**  
-![Organizational Units](https://i.imgur.com/M3zrqjU.png)  
+![OUs Created](https://i.imgur.com/zfQGpbK.png)  <!-- replace with your actual OU screenshot -->
 
 ---
 
-## 🔹 Step 4: Add Users and Groups  
-1. Inside each OU, create sample users:  
-   - HR: `hr_user1`, `hr_user2`  
-   - IT: `it_admin`, `it_support`  
-   - Finance: `fin_analyst`, `fin_manager`  
-2. Create security groups for each department.  
+## 🔹 Step 4: Add Sample Users and Groups  
+1. In each OU, right-click → **New → User**.  
+2. Create sample users:  
+   - HR: `Alice.HR`, `Bob.HR`  
+   - IT: `Charlie.IT`, `Diana.IT`  
+   - Finance: `Eve.Fin`, `Frank.Fin`  
+3. Create security groups for each department and add users accordingly.
 
 📸 **Screenshot:**  
-![Users and Groups](https://i.imgur.com/yZKIOyq.png)  
+![Users and Groups](https://i.imgur.com/zfQGpbK.png)  <!-- replace with your actual screenshot -->
 
 ---
 
-## 🔹 Step 5: Apply Basic GPOs  
-1. Open **Group Policy Management** on `DC1`.  
-2. Create and link new GPOs:  
-   - **Password Policy** → enforce strong passwords.  
-   - **Lock Screen Policy** → set auto lock after inactivity.  
-   - **Drive Mapping Policy** → map network drive for shared files.  
-3. Force update on clients:  
-   ```bash
-   gpupdate /force
+## 🔹 Step 5: Apply Basic Group Policies  
+1. Open **Group Policy Management**.  
+2. Create a new GPO → link it to the domain.  
+3. Configure policies like:  
+   - **Password Policy**: Minimum 8 characters, complexity enabled  
+   - **Account Lockout Policy**: 5 failed login attempts  
+   - **Screen Lock/Idle Timeout**: 10 minutes  
+
+📸 **Screenshot:**  
+![GPO Applied](https://i.imgur.com/zfQGpbK.png)  <!-- replace with your actual GPO screenshot -->
+
+---
+
+✅ **Deliverables for Week 1:**  
+- Functional Windows Server 2022 Domain Controller  
+- 1–2 Windows clients joined to the domain  
+- OUs, users, and groups created  
+- Basic GPOs applied  
+- Screenshots documented in GitHub
