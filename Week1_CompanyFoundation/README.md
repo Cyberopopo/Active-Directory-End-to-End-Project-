@@ -39,7 +39,7 @@
 4. Ensure **Protect container from accidental deletion** is checked.
 
 📸 **Screenshot:**  
-![OUs Created](https://i.imgur.com/zfQGpbK.png)  <!-- replace with your actual OU screenshot -->
+![OUs Created](https://i.imgur.com/Vz0vrpC.png)
 
 ---
 
