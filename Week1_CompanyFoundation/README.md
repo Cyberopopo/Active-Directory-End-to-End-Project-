@@ -12,11 +12,11 @@ Build a functioning **Active Directory (AD) domain** with clients and basic poli
 2. Open **Server Manager** → click **Add roles and features**.  
 3. Install the **Active Directory Domain Services (AD DS)** role.  
 4. Promote the server to a **Domain Controller**.  
-   - New forest name: `corp.local`  
+   - New forest name: `cyberopopo.local`  
    - Restart when prompted.  
 
 📸 **Screenshot:**  
-![Domain Controller Setup](https://i.imgur.com/zfQGpbK.png)  
+![Domain Controller Setup](https://i.imgur.com/dFYmpRD.png)
 
 ---
 
