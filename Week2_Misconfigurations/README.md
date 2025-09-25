@@ -21,9 +21,11 @@
    - Uncheck **User must change password at next logon** if you want the account to remain with the weak password.  
    - Optionally check **Password never expires** for persistent lab accounts.  
 7. Click **Next → Finish**.  
-8. Repeat for the number of weak accounts you need.
+8. Repeat for the number of weak accounts you need.  
 
-**Evidence:** take screenshots of the New User dialog, and the user properties > Account tab showing password options.
+📸 **Screenshot:**  
+![Weak User Created](https://i.imgur.com/xNKU7td.png)  
+ 
 
 ---
 
