@@ -50,16 +50,28 @@
 
 > Purpose: create intentionally risky delegations/memberships (lab-only).
 
-**A — Add a departmental group to another group**
-1. In ADUC, find the group you want to modify (e.g., `Domain Users` or a lower-privileged custom group).  
-2. Right-click → **Properties** → **Members** tab → **Add…** → add `IT_Group` or `HR_Group` → **OK**.
+---
 
-**B — Delegate control on an OU**
-1. In ADUC, right-click the OU → **Delegate Control…**.  
+### 🔹 A — Add a departmental group to another group
+1. In **ADUC**, find the group you want to modify (e.g., `Domain Users` or a lower-privileged custom group).  
+2. Right-click → **Properties** → **Members** tab → **Add…** → add `IT_Group` or `HR_Group` → **OK**.  
+
+---
+
+### 🔹 B — Delegate control on an OU
+1. In **ADUC**, right-click the OU → **Delegate Control…**.  
 2. Click **Next** → **Add…** → pick the account/group you want to delegate (e.g., `weakuser1`) → **Next**.  
-3. Choose a task (e.g., **Create, delete and manage user accounts** or **Modify the membership of a group**) or **Custom task to delegate** → **Next → Finish**.
+3. Choose a task (e.g., **Create, delete and manage user accounts** or **Modify the membership of a group**)  
+   → or **Custom task to delegate** → **Next → Finish**.  
 
-**Evidence:** screenshot the Delegate Control wizard final page; screenshot group membership changes.
+📸 **Screenshot:**  
+![Misconfigured Permissions](https://i.imgur.com/Jbv3aH7.png)  
+
+---
+
+**Evidence:**  
+- Screenshot the **Delegate Control wizard final page**.  
+- Screenshot the **Group membership changes**.  
 
 ---
 
