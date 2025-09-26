@@ -38,9 +38,11 @@
    - **Group type**: Security  
 4. Click **OK**. Repeat for `IT_Group`, `Finance_Group`.  
 5. To add members: right-click the group → **Properties** → **Members** tab → **Add…**.  
-6. Type or select the users (e.g., `Alice.HR`, `Bob.HR`) → **Check Names** → **OK** → **Apply → OK**.
+6. Type or select the users (e.g., `Alice.HR`, `Bob.HR`) → **Check Names** → **OK** → **Apply → OK**.  
 
-**Evidence:** screenshot the group Properties → Members tab, and an ADUC list view with groups/users visible (then `View → Export List…` to save a CSV/TSV snapshot).
+📸 **Screenshot:**  
+![Department Security Groups](https://i.imgur.com/3AZAzaZ.png)  
+
 
 ---
 
