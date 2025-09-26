@@ -43,7 +43,7 @@
 
 ### 🔹 B — Delegate control on an OU
 1. In **ADUC**, right-click the OU → **Delegate Control…**.  
-2. Click **Next** → **Add…** → pick the account/group you want to delegate (e.g., `weakuser`) → **Next**.  
+2. Click **Next** → **Add…** → pick the group you want to delegate (e.g., `IT_Group`) → **Next**.  
 3. Choose a task (e.g., **Create, delete and manage user accounts**)  
    → or **Custom task to delegate** → **Next → Finish**.  
 
