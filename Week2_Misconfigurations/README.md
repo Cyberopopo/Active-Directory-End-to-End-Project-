@@ -16,8 +16,8 @@
 2. Open **Active Directory Users and Computers** (`Start` → type **Active Directory Users and Computers** → Enter).  
 3. Expand your domain → navigate to the target OU (e.g., `OU=HR`).  
 4. Right-click the OU → **New** → **User**.  
-5. Fill in: First name / Last name / User logon name (e.g., `WeakUser1`) → **Next**.  
-6. Enter a weak password (example lab-only: `Password123`) in **Password** and **Confirm password**.  
+5. Fill in: First name / Last name / User logon name (e.g., `WeakUser`) → **Next**.  
+6. Enter a weak password in **Password** and **Confirm password**.  
    - Uncheck **User must change password at next logon** if you want the account to remain with the weak password.  
    - Optionally check **Password never expires** for persistent lab accounts.  
 7. Click **Next → Finish**.  
@@ -25,53 +25,30 @@
 
 📸 **Screenshot:**  
 ![Weak User Created](https://i.imgur.com/xNKU7td.png)  
- 
-
----
-
-## 🔹 Step 2 — Create department security groups & add users (ADUC GUI)
-
-1. In **Active Directory Users and Computers**, navigate to the OU where you want the group (e.g., `OU=HR`).  
-2. Right-click the OU → **New** → **Group**.  
-3. Enter **Group name** (e.g., `HR_Group`).  
-   - **Group scope**: Global (default)  
-   - **Group type**: Security  
-4. Click **OK**. Repeat for `IT_Group`, `Finance_Group`.  
-5. To add members: right-click the group → **Properties** → **Members** tab → **Add…**.  
-6. Type or select the users (e.g., `Alice.HR`, `Bob.HR`) → **Check Names** → **OK** → **Apply → OK**.  
-
-📸 **Screenshot:**  
-![Department Security Groups](https://i.imgur.com/3AZAzaZ.png)  
 
 
 ---
 
-## 🔹 Step 3 — Misconfigure groups & permissions via GUI (delegation & membership)
+## 🔹 Step 2 — Misconfigure groups & permissions via GUI (delegation & membership)
 
 > Purpose: create intentionally risky delegations/memberships (lab-only).
 
 ---
 
 ### 🔹 A — Add a departmental group to another group
-1. In **ADUC**, find the group you want to modify (e.g., `Domain Users` or a lower-privileged custom group).  
-2. Right-click → **Properties** → **Members** tab → **Add…** → add `IT_Group` or `HR_Group` → **OK**.  
+1. In **ADUC**, find the group you want to modify (e.g., `Server Operator`).  
+2. Right-click → **Properties** → **Members** tab → **Add…** → add `IT_Group` → **OK**.  
 
 ---
 
 ### 🔹 B — Delegate control on an OU
 1. In **ADUC**, right-click the OU → **Delegate Control…**.  
-2. Click **Next** → **Add…** → pick the account/group you want to delegate (e.g., `weakuser1`) → **Next**.  
-3. Choose a task (e.g., **Create, delete and manage user accounts** or **Modify the membership of a group**)  
+2. Click **Next** → **Add…** → pick the account/group you want to delegate (e.g., `weakuser`) → **Next**.  
+3. Choose a task (e.g., **Create, delete and manage user accounts**)  
    → or **Custom task to delegate** → **Next → Finish**.  
 
 📸 **Screenshot:**  
 ![Misconfigured Permissions](https://i.imgur.com/Jbv3aH7.png)  
-
----
-
-**Evidence:**  
-- Screenshot the **Delegate Control wizard final page**.  
-- Screenshot the **Group membership changes**.  
 
 ---
 
