@@ -52,27 +52,42 @@
 
 ---
 
-## 🔹 Step 4 — Enable SMBv1 via GUI (Windows Features) & allow legacy auth via GPO GUI (lab only)
+## 🔹 Step 4 — Enable SMBv1 & NTLM (Weak Authentication)
 
-> **Warning:** SMBv1 and relaxed authentication are insecure. Use only on isolated lab VMs.
+### A — Enable SMBv1 (Server)
+- Open **Server Manager** → **Manage** → **Add Roles and Features**.  
+- Go to **Features** → check **SMB 1.0/CIFS File Sharing Support** → **Install** → restart if required.  
 
-**A — Enable SMBv1 (GUI)**
-1. On the target machine (file server or client VM): `Start` → **Control Panel** → **Programs and Features** → **Turn Windows features on or off**.  
-2. In the list, find **SMB 1.0/CIFS File Sharing Support** → check it (expand and ensure **SMB 1.0/CIFS Server** is checked if required).  
-3. Click **OK** → allow Windows to apply changes → **Restart** if prompted.
+📸 Evidence:  
+![SMBv1 Enabled](https://i.imgur.com/nKU9Sa4.png)
 
-**Verify (GUI):** Reopen **Turn Windows features on or off** to confirm SMB 1.0 is checked; also open **Server Manager → File and Storage Services → Shares** to see server shares.
+---
 
-**B — Allow NTLM / relax LAN Manager auth via Group Policy Management (GUI)**
-1. On the Domain Controller, open **Group Policy Management** (`Start` → type **Group Policy Management**).  
-2. Right-click the domain or a test OU → **Create a GPO in this domain, and Link it here** → name it `Allow_NTLM_Lab`.  
-3. Right-click the new GPO → **Edit**.  
-4. Navigate to:  
-   `Computer Configuration → Policies → Windows Settings → Security Settings → Local Policies → Security Options`.  
-5. Find **Network security: LAN Manager authentication level** → double-click → set to a value that allows NTLM/LM responses (e.g., *"Send LM & NTLM responses"*), then **OK**.  
-6. Close the editor. Ensure the GPO is linked to a test OU with only lab machines.
+### B — Force NTLM Authentication via GPO
+- Open **Group Policy Management** on the DC.  
+- Edit a GPO (e.g., Default Domain Policy or create `Allow_NTLM_Lab`).  
+- Go to:  
+  **Computer Configuration** → **Windows Settings** → **Security Settings** → **Local Policies** → **Security Options**.  
+- Set:  
+  - **Network security: LAN Manager authentication level** → **Send LM & NTLM responses**.  
+  - **Network security: Restrict NTLM** → **Disable** (lab-only).  
 
-**Evidence:** screenshot GPO settings (the Security Options entry), screenshot the GPO linked under the domain/OU.
+📸 Evidence:  
+![NTLM Config](https://i.imgur.com/k7YiRL2.png)
+
+---
+
+### C — Update Client Machines
+- On each client: open **Command Prompt (Admin)** and run:
+
+
+---
+
+✅ **Result:**  
+- SMBv1 is now enabled.  
+- Clients and servers accept weak LM/NTLM authentication.  
+- Lab deliberately misconfigured for testing attack paths.
+
 
 ---
 
