@@ -80,32 +80,18 @@
 ### C — Update Client Machines
 - On each client: open **Command Prompt (Admin)** and run:
 
-
----
-
-✅ **Result:**  
-- SMBv1 is now enabled.  
-- Clients and servers accept weak LM/NTLM authentication.  
-- Lab deliberately misconfigured for testing attack paths.
-
-
 ---
 
 ## 🔹 Step 5 — Create a vulnerable file share (File Explorer / Server Manager GUI)
 
-**A — File Explorer method**
-1. On the file server machine, open **File Explorer** → create folder `C:\VulnShare`.  
-2. Right-click `C:\VulnShare` → **Properties** → **Sharing** tab → **Advanced Sharing…**.  
-3. Check **Share this folder** → set Share name `VulnShare` → click **Permissions**.  
-4. Click **Add…** → type `Everyone` → **OK** → check **Full Control** → **OK** → **Apply → OK**.  
-5. Switch to **Security** tab → **Edit…** → **Add…** → add `Everyone` or `HR_Group` → give **Modify/Full control** → **OK**.
-
-**B — Server Manager method (Windows Server)**
+**Server Manager method (Windows Server)**  
 1. Open **Server Manager** → **File and Storage Services** → **Shares**.  
 2. Click **Tasks** → **New Share** → choose an SMB share profile (Quick or SMB Share - Quick).  
-3. Point to `C:\VulnShare`, name the share `VulnShare`, and on Permissions step add `Everyone` with Full Control → Finish.
+3. Point to `C:\VulnShare`, name the share `VulnShare`, and on Permissions step add `Everyone` with Full Control → Finish.  
 
-**Evidence:** screenshot the Advanced Sharing dialog, Share Permissions, and Security tab showing NTFS permissions; screenshot Server Manager Shares view.
+
+![Server Manager Shares view](https://i.imgur.com/NmzfEvu.png)  
+
 
 ---
 
