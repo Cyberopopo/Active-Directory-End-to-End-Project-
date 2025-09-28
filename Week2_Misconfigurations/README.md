@@ -1,12 +1,6 @@
-# 🗓 Week 2 — Phase 2 (GUI only): Company Expands (Weaknesses Introduced)
+# 🗓 Week 2: Company Expands (Weaknesses Introduced)
 
-**Goal:** Simulate misconfigurations using GUI tools only (lab environment only).
-
----
-
-⚠️ **Safety reminder**
-- Do this **only** in an isolated lab / VM snapshots taken.  
-- Do **not** enable SMBv1 or weaken production systems.
+**Goal:** Simulate misconfigurations (lab environment only).
 
 ---
 
@@ -23,7 +17,7 @@
 7. Click **Next → Finish**.  
 8. Repeat for the number of weak accounts you need.  
 
-📸 **Screenshot:**  
+ 
 ![Weak User Created](https://i.imgur.com/xNKU7td.png)  
 
 
@@ -47,7 +41,7 @@
 3. Choose a task (e.g., **Create, delete and manage user accounts**)  
    → **Next → Finish**.  
 
-📸 **Screenshot:**  
+
 ![Misconfigured Permissions](https://i.imgur.com/Jbv3aH7.png)  
 
 ---
@@ -58,7 +52,7 @@
 - Open **Server Manager** → **Manage** → **Add Roles and Features**.  
 - Go to **Features** → check **SMB 1.0/CIFS File Sharing Support** → **Install** → restart if required.  
 
-📸 Evidence:  
+ 
 ![SMBv1 Enabled](https://i.imgur.com/nKU9Sa4.png)
 
 ---
@@ -72,7 +66,7 @@
   - **Network security: LAN Manager authentication level** → **Send LM & NTLM responses**.  
   - **Network security: Restrict NTLM** → **Disable** (lab-only).  
 
-📸 Evidence:  
+
 ![NTLM Config](https://i.imgur.com/k7YiRL2.png)
 
 ---
@@ -82,7 +76,7 @@
 **Server Manager method (Windows Server)**  
 1. Open **Server Manager** → **File and Storage Services** → **Shares**.  
 2. Click **Tasks** → **New Share** → choose an SMB share profile (Quick or SMB Share - Quick).  
-3. Point to `C:\VulnShare`, name the share `VulnShare`, and on Permissions step add `Everyone` with Full Control → Finish.  
+3. Point to `C:\VulnShare`, name the share `VulnShare`, and on Permissions step add `Everyone` with Full Control → Finish.
 
 
 ![Server Manager Shares view](https://i.imgur.com/NmzfEvu.png)  
@@ -90,21 +84,7 @@
 
 ---
 
-## 🔹 Step 6 — Document attack paths & collect GUI evidence
-
-Collect the following from the GUI and save to your `week-2/evidence/` folder:
-
-- ADUC screenshots: OU view, user properties, group properties (Members tab).  
-- Export lists from ADUC: In the right-pane, select objects → right-click → **Export List…** → save CSV.  
-- GPMC screenshots: GPO list, linked GPOs, and the specific Security Options entries.  
-- File share screenshots: Advanced Sharing → Permissions, Security tab NTFS permissions.  
-- Windows Features screenshot showing **SMB 1.0/CIFS** enabled.  
-- Server Manager → File and Storage Services → Shares screenshot.  
-- System timestamps: take a screenshot of the Event Viewer if desired (e.g., Security logs after tests).
-
----
-
-## 🔁 GUI Rollback (undo changes)
+## 🔁Rollback (undo changes)
 
 1. **Disable SMBv1 (GUI)**  
    - Control Panel → Programs and Features → Turn Windows features on or off → uncheck **SMB 1.0/CIFS File Sharing Support** → OK → Restart.
@@ -123,13 +103,3 @@ Collect the following from the GUI and save to your `week-2/evidence/` folder:
    - Force Group Policy refresh by restarting lab machines or using `gpupdate /force` on clients (GUI: restart clients).
 
 ---
-
-## ✅ Deliverables (GUI-produced)
-- `misconfigurations.md` — copy of the actions performed (include screenshot filenames).  
-- `evidence/` — screenshots captured from ADUC, GPMC, File Explorer, Server Manager.  
-- `weak-accounts.csv` — exported ADUC lists (use **Export List…** in ADUC).  
-- `summary.md` — brief weakness report (impact, attack path, remediation).
-
----
-
-**End of GUI-only Week 2 instructions.**
