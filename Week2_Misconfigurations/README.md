@@ -77,11 +77,6 @@
 
 ---
 
-### C — Update Client Machines
-- On each client: open **Command Prompt (Admin)** and run:
-
----
-
 ## 🔹 Step 5 — Create a vulnerable file share (File Explorer / Server Manager GUI)
 
 **Server Manager method (Windows Server)**  
