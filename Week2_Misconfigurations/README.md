@@ -103,3 +103,10 @@
    - Force Group Policy refresh by restarting lab machines or using `gpupdate /force` on clients (GUI: restart clients).
 
 ---
+
+---
+
+## 📌 Next Step  
+
+As the company expands, new misconfigurations and weaknesses are introduced.  
+👉 See [summary.md](summary.md) for an overview of the weaknesses created at this stage.  
