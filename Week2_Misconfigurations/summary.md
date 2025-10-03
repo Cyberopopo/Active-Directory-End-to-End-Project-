@@ -28,5 +28,5 @@ However, this stage introduced **critical security weaknesses** due to misconfig
 ---
 
 ✅ **Learning Point**: Expansion without security controls leads to misconfigured shares and weak access policies.  
-This sets the stage for **later exploitation phases**, where attackers can leverage these weaknesses to move laterally and escalate privileges.  
+This sets the stage for **later exploitation phases**, where attackers can leverage these weaknesses to move laterally and escalate privileges. 
 
